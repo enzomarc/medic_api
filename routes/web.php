@@ -18,6 +18,13 @@ Route::get('/', function () {
 	return "Medic API v1";
 });
 
-Route::group('api', function () {
+Route::group(['prefix' => 'api'], function () {
+	
+	// CRUD User
+	Route::get('users', 'UserController@index');
+	Route::get('users/{user}', 'UserController@show');
+	Route::post('users', 'UserController@store');
+	Route::put('users/{user}', 'UserController@update');
+	Route::delete('users/{user}', 'UserController@delete');
 	
 });
