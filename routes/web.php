@@ -11,6 +11,13 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+use Illuminate\Support\Facades\Route;
+
+
+Route::get('/', function () {
+	return "Medic API v1";
+});
+
+Route::group('api', function () {
+	
 });
