@@ -14,11 +14,11 @@
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-	return "Medic API v1";
-});
-
 Route::group(['prefix' => 'api'], function () {
+	
+	Route::get('/', function () {
+		return "Medic API v1";
+	});
 	
 	// CRUD User
 	Route::get('users', 'UserController@index');
