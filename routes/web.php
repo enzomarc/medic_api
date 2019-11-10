@@ -27,4 +27,7 @@ Route::group(['prefix' => 'api'], function () {
 	Route::put('users/{user}', 'UserController@update');
 	Route::delete('users/{user}', 'UserController@delete');
 	
+	// Login
+	Route::post('login', 'AuthenticationController@login');
+	
 });
